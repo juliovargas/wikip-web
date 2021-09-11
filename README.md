@@ -1,4 +1,4 @@
-## Wikip Telegram Bot
+## Wikip Web
 
 #### What is required?
 You will need:
@@ -10,9 +10,6 @@ You can resolve python modules dependencies by:
 sudo pip install -r requirements.txt
 ```
 
-*Config:*
-- Edit ***conf/token.conf.dist*** using your token received from BotFather 
-and save it to ***conf/token.conf***
 
 #### Run in production as user root
 
