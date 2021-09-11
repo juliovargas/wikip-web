@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</br>
+<div class="container">
+    <audio controls>
+        <source src="../../static/{{ user_id }}/voices/{{ asset_id }}.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio> 
+</div>
+
+<div class="text-center"> 
+    <div class="btn-group" role="group" aria-label="Basic example"></div>
+        <a class="btn" href="/{{ user_id }}">
+            <i class="fas fa-user"></i> Todos los recuerdos</a>
+        <a class="btn" href="/{{ user_id }}/voices">
+            <i class="fas fa-microphone"></i> Ver todos</a>
+        <a class="btn" href="/{{ user_id }}/delete/voice/{{ asset_id }}">
+            <i class="far fa-trash-alt"></i> Borrar mensaje de voz</a>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    {% for key, value in photos.items() %}
+    <div class="col">
+    <div class="card" style="width: 18rem;">
+      <a href="/{{ user_id }}/photo/{{ key }}">
+        <img src="../../static/{{ user_id }}/photos/{{ key }}.jpg" class="card-img-top" alt="...">
+      </a>
+      <div class="card-body">
+        <p class="card-text">{{ value }}</p>
+        <!-- <a href="/{{ user_id }}/photo/{{ key }}" class="btn btn-primary">Ver</a> -->
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="text-center"> 
+  <div class="btn-group" role="group" aria-label="Basic example"></div>
+      <a class="btn" href="/{{ user_id }}">
+        <i class="fas fa-user"></i> Todos los recuerdos</a>
+      <a class="btn" href="/{{ user_id }}/carousel">
+        <i class="fas fa-images"></i> Ver carrusel</a>
+  </div>
+</div>
+
+{% endblock content %}
+

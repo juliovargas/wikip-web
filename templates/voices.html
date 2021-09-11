@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+</br>
+<div class="container">
+    {% if voices|length > 0 %}
+        {% for item in voices %}
+            <audio controls>
+                <source src="../../static/{{ user_id }}/voices/{{ item }}.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>  
+        {% endfor %}
+    {% else %}
+        <p>No existen mensajes de voz.</p>
+    {% endif %}
+
+    <div class="container">
+        <a class="btn" href="/{{ user_id }}">
+            <i class="fas fa-user"></i> Todos los recuerdos</a>
+    </div>
+    
+</div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% for item in photos %}
+    <a href="/{{ user_id }}/photo/{{ item }}">
+      <img src="../../static/{{ user_id }}/photos/{{ item }}.jpg" width="200" height="200" alt="thumbnail" class="img-thumbnail">
+    </a>
+  {% endfor %}
+   
+
+  <div class="text-center"> 
+    <div class="btn-group" role="group" aria-label="Basic example"></div>
+        <a class="btn" href="/{{ user_id }}">
+          <i class="fas fa-user"></i> Todos los recuerdos</a>
+        <a class="btn" href="/{{ user_id }}/carousel">
+          <i class="fas fa-images"></i> Ver carrusel</a>
+    </div>
+  </div>
+
+{% endblock content %}
+

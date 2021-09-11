@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-sm-6">
+    <figure>
+        <img src="../../static/{{ user_id }}/photos/{{ asset_id }}.jpg" class="img-fluid" alt="Responsive image">
+    </figure>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">{{description}}</p>
+    </blockquote>
+    
+</div>
+
+<div class="text-center"> 
+    <div class="btn-group" role="group" aria-label="Basic example"></div>
+        <a class="btn" href="/{{ user_id }}">
+            <i class="fas fa-user"></i> Todos los recuerdos</a>
+        <a class="btn" href="/{{ user_id }}/photos">
+            <i class="fas fa-images"></i> Ver miniaturas</a>
+        <a class="btn" href="/{{ user_id }}/delete/photo/{{ asset_id }}">
+            <i class="far fa-trash-alt"></i> Borrar foto</a>
+    </div>
+</div>
+{% endblock content %}
